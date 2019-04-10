@@ -22,7 +22,7 @@ then
  -H "Content-Type:application/json" \
  -H "X-Funkypenguin-Token:$WEBHOOK_TOKEN" \
  -X POST \
- -d "{\"dst-ip\":\"$DST_IP\",\"frontend-port\":\"$FRONTEND_PORT\",\"backend-port\":\"$BACKEND_PORT\",\"action\":\"$ACTION\",\"name\":\"$NAME\",\"send_proxy\":\"$SEND_PROXY\"}" \
+ -d "{\"dst-ip\":\"$DST_IP\",\"frontend-port\":\"$FRONTEND_PORT\",\"backend-port\":\"$BACKEND_PORT\",\"action\":\"$ACTION\",\"name\":\"$NAME\",\"send-proxy\":\"$SEND_PROXY\"}" \
  $WEBHOOK
 else
   while true; do
@@ -31,7 +31,7 @@ else
   	-H "Content-Type:application/json" \
   	-H "X-Funkypenguin-Token:$WEBHOOK_TOKEN" \
   	-X POST \
-  	-d "{\"dst-ip\":\"$DST_IP\",\"frontend-port\":\"$FRONTEND_PORT\",\"backend-port\":\"$BACKEND_PORT\",\"action\":\"$ACTION\",\"name\":\"$NAME\",\"send_proxy\":\"$SEND_PROXY\"}" \
+  	-d "{\"dst-ip\":\"$DST_IP\",\"frontend-port\":\"$FRONTEND_PORT\",\"backend-port\":\"$BACKEND_PORT\",\"action\":\"$ACTION\",\"name\":\"$NAME\",\"send-proxy\":\"$SEND_PROXY\"}" \
   	$WEBHOOK
      sleep $REPEAT_INTERVAL
   done
